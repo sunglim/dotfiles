@@ -43,6 +43,10 @@ nmap <F6> :BufExplorer<CR>
 nmap <F8> :NERDTreeFind<CR>
 nmap <F9> :NERDTreeToggle<CR>
 
+"- replace ctags key with cscope
+map <C-_> :cstag <C-R>=expand("<cword>")<CR><CR>
+map g<C-]> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
+map g<C-\> :cs find 0 <C-R>=expand("<cword>")<CR><CR>
 "================== C11 syntax  ==================="
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 
@@ -72,10 +76,13 @@ filetype plugin indent on     " required!
 "================== CSCOPE ==================="
 if filereadable("./cscope.out")
   cs add ./cscope.out
+  set cst
 elseif filereadable("./cscope.out")
   cs add ../cscope.out
+  set cst
 elseif filereadable("./cscope.out")
   cs add ../../cscope.out
+  set cst
 endif
                                 
 
