@@ -46,7 +46,7 @@ nmap <F8> :NERDTreeFind<CR>
 nmap <F9> :NERDTreeToggle<CR>
 
 "This totally depend on the project
-nmap <F11> :!find ./hbbtv/ ./launcher/ ./ohtv/ -iname '*.c' -o -iname '*.h' -print > cscope.files<CR>
+nmap <F11> :!find ./hbbtv/ ./launcher/ ./ohtv/ -iname '*.c' -o -iname '*.h' > cscope.files<CR>
    \:!cscope -b -i cscope.files -f cscope.out<CR>
    \:cs reset<CR>
 
