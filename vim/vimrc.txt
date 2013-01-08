@@ -74,6 +74,10 @@ Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
 
+"================= highlight over than 80 space =========
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 
 "================== CSCOPE ==================="
 if filereadable("./cscope.out")
