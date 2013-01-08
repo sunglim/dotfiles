@@ -45,6 +45,12 @@ nmap <F6> :BufExplorer<CR>
 nmap <F8> :NERDTreeFind<CR>
 nmap <F9> :NERDTreeToggle<CR>
 
+"This totally depend on the project
+nmap <F11> :!find ./hbbtv/ ./launcher/ ./ohtv/ -iname '*.c' -o -iname '*.h' -print > cscope.files<CR>
+   \:!cscope -b -i cscope.files -f cscope.out<CR>
+   \:cs reset<CR>
+
+
 "- replace ctags key with cscope
 map <C-_> :cstag <C-R>=expand("<cword>")<CR><CR>
 map g<C-]> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
