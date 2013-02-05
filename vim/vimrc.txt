@@ -74,6 +74,19 @@ Bundle 'gmarik/vundle'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'a.vim'
+Bundle 'fugitive.vim'
+Bundle 'minibufexpl.vim'
+Bundle 'Syntastic'
+"snipmate for auto complete
+Bundle 'superSnipMate'
+"no need to press 'ctrl+n' for autocompletion
+Bundle 'AutoComplPop'
+"for selecting autocompletion item by pressing tab
+Bundle 'SuperTab'
+"for FuzzyFinder tab
+Bundle 'SuperTab-continued.'
+
+
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
