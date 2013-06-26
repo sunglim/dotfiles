@@ -18,6 +18,7 @@ set ruler
 set showcmd
 set smarttab
 set hlsearch
+set list
 syntax enable
 "-------------------- VIM Start With --------------"
 "au VimEnter * Tlist
