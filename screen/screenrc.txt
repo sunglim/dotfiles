@@ -1,6 +1,6 @@
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
 
-screen -t work 0
-screen -t build 1
-screen -t temp 2
+screen -t VIM 0
+screen -t BUILD 1
+screen -t BASH 2
