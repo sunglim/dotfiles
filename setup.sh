@@ -9,6 +9,14 @@ fi
 echo 'Copy .screenrc to ROOT'
 cp $CUR_DIR/.screenrc $HOME/.screenrc
 
+if [ -f .vimrc ]; then
+  echo 'Move Old .vimrc to vimrc.old'
+  mv .vimrc vimrc.old
+fi
+
+echo 'Copy .vimrc to ROOT'
+cp $CUR_DIR/.vimrc $HOME/.vimrc
+
 echo 'clone vundle.. '
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
