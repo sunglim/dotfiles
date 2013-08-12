@@ -1,7 +1,5 @@
 "NOTE : to use this .vimrc, you need to install
 "TagList, NERDTree, Vundle, FuzzyFinder plugins.
-"================== Color Scheme =================="
-colorscheme zenburn
 
 "==================== VIM Set ====================="
 set nu
