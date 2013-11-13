@@ -1,0 +1,10 @@
+find_output=`find ./ -name $1`
+
+if [ -n "$find_output" ]; then
+  echo $find_output
+  echo "Continue.."
+  read temp
+  vi $find_output
+else
+ echo "Result : None"
+fi
