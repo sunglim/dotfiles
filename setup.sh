@@ -17,6 +17,9 @@ fi
 echo 'Copy .vimrc to ROOT'
 cp $CUR_DIR/.vimrc $HOME/.vimrc
 
+echo 'Copy ./util/* to ROOT'
+cp $CUR_DIR/util/ $HOME -R
+
 echo 'clone vundle.. '
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
