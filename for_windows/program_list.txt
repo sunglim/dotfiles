@@ -1,0 +1,24 @@
+Notepad++  - Main Text Editor.
+Google Chrome ? Main Web brower, really fast and neat.
+Filezilla  -  Opensource FTP Client.
+7Zip ? Open source Windows utility for manipulating archives.
+Launchy ? launcher * MUST HAVE *
+PUTTY.exe ? terminal program for ssh, serial, telnet
+Evernote ? cloud based notepad
+Firefox, Opera, Chrome Canary  - secondary web browser (you will use this someday)
+GIT  - must have source control util.
+sumatraPDF ? PDF reader
+keepass  - for easily handling password.
+fiddler2 ? powerful web debugger
+autohotkey(window pad) -
+gomplayer or VLC player
+WinDirStat
+GVIM
+.net framework 4.0
+CoreUtils for Windows (http://gnuwin32.sourceforge.net/packages/coreutils.htm
+gnuwget
+mingw
+
+
+For Dart =
+Dart Editor - https://www.dartlang.org/tools/download.html
