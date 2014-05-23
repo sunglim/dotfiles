@@ -22,7 +22,7 @@ if [ -f .vimrc ]; then
 fi
 
 echo 'Copy .vimrc to ROOT'
-cp $CUR_DIR/.vimrc $HOME/.vimrc
+cp $CUR_DIR/vim/.vimrc $HOME/.vimrc
 
 echo 'clone vundle.. '
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
