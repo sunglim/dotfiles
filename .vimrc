@@ -84,8 +84,7 @@ Bundle 'AutoComplPop'
 Bundle 'SuperTab'
 "for FuzzyFinder tab
 Bundle 'SuperTab-continued.'
-
-
+Bundle 'scrooloose/nerdtree'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
