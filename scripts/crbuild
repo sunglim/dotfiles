@@ -41,3 +41,5 @@ do_build() {
 
   exec ninja -C $base $targets
 }
+
+do_build "$@"
