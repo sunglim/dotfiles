@@ -11,15 +11,6 @@ for a in l ll la; do
 done
 
 #
-# Platform specific (first because some stuff in here relies on it)
-#
-
-case `uname` in
-  Darwin) source $HOME/.rc/profile_Darwin ;;
-  Linux)  source $HOME/.rc/profile_Linux ;;
-esac
-
-#
 # Paths etc
 #
 
