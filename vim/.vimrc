@@ -74,6 +74,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'a.vim'
 Bundle 'fugitive.vim'
+Bundle 'taglist.vim'
 Bundle 'minibufexpl.vim'
 Bundle 'Syntastic'
 "snipmate for auto complete
