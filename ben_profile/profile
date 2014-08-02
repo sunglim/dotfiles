@@ -308,6 +308,10 @@ crup() {
   gclient sync -f
 }
 
+crgyp() {
+  build/gyp_chromium
+}
+
 gb() {
   back="`pwd`"
   while [ ! -f .git/config ]; do
