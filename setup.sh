@@ -41,4 +41,4 @@ cp $CUR_DIR/util/ $HOME -R
 #
 echo "source $CUR_DIR/ben_profile/git_completion" >> ~/.bashrc
 echo "source $CUR_DIR/ben_profile/profile" >> ~/.bashrc
-echo "export PATH=$PATH:/home/sungguk/program_store/dotfiles/scripts" >> ~/.bashrc
+echo "export PATH=$PATH:$CUR_DIR/scripts" >> ~/.bashrc
