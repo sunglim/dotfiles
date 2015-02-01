@@ -80,6 +80,7 @@ gls()  { git ls-files "$@"; }
 gm()   { git merge "$@"; }
 gmb()  { git merge-base "$@"; }
 gp()   { git pull "$@"; }
+gps()  { git push origin HEAD:refs/for/"$@"; }
 gr()   { git rebase "$@"; }
 gs()   { git status "$@"; }
 gst()  { git status "$@"; }
