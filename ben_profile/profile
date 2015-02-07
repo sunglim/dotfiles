@@ -1,4 +1,5 @@
 #!/bin/bash
+CUR_DIR=`pwd`
 
 #
 # Undo stuff before sourcing anything
@@ -9,6 +10,14 @@ for a in l ll la; do
     unalias $a &>/dev/null
   fi
 done
+#
+# Platform specific (first because some stuff in here relies on it)
+#
+
+case `uname` in
+  Darwin) source $CUR_DIR/rc/profile_Darwin ;;
+  Linux)  source $CUR_DIR/rc/profile_Linux ;;
+esac
 
 #
 # Paths etc
