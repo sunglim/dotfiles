@@ -2,7 +2,7 @@
 # Company chromium build
 
 do_build() {
-  ./build-main.bash -j=12 -webos
+  ./build.sh --webos
 }
 
 do_build "$@"
