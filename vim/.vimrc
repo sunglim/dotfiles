@@ -60,34 +60,38 @@ au BufNewFile,BufRead *.cpp set syntax=cpp11
 map <leader>fb :FufBuffer<CR>
 map <leader>ff :FufFile **/<CR>
 
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'a.vim'
-Bundle 'fugitive.vim'
-Bundle 'taglist.vim'
-Bundle 'minibufexpl.vim'
-Bundle 'Syntastic'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'L9'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'user/L9', {'name': 'newL9'}
+
+Plugin 'FuzzyFinder'
+Plugin 'a.vim'
+Plugin 'fugitive.vim'
+Plugin 'taglist.vim'
+Plugin 'minibufexpl.vim'
+Plugin 'Syntastic'
 "snipmate for auto complete
-Bundle 'superSnipMate'
+Plugin 'superSnipMate'
 "no need to press 'ctrl+n' for autocompletion
-Bundle 'AutoComplPop'
+Plugin 'AutoComplPop'
 "for selecting autocompletion item by pressing tab
-Bundle 'SuperTab'
+Plugin 'SuperTab'
 "for FuzzyFinder tab
-Bundle 'scrooloose/nerdtree'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-" ...
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()
 
 filetype plugin indent on     " required!
 

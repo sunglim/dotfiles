@@ -25,10 +25,10 @@ echo 'Copy .vimrc to ROOT'
 cp $CUR_DIR/vim/.vimrc $HOME/.vimrc
 
 echo 'clone vundle.. '
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo 'Install plugins declared at Bundle'
-vim +BundleInstall +qall
+vim +PluginInstall +qall
 
 #
 # Utility script.
