@@ -54,6 +54,7 @@ v()       { vim -p "$@"; }
 e()       { vim -p $(echo $@ | sed 's/:/ +/'); }
 wg()      { wget --no-check-certificate -O- "$@"; }
 grr()     { grep -rn --color --exclude='.svn' "$@"; }
+agg()     { ack --color "$@" | more -R; }
 s()       { screen -DR "$@"; }
 prepend() { sed "s|^|$1" "$@"; }
 sx()      { ssh -Y "$@"; }

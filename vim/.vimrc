@@ -91,6 +91,8 @@ Plugin 'SuperTab'
 "for FuzzyFinder tab
 Plugin 'scrooloose/nerdtree'
 
+Plugin 'kien/ctrlp.vim'
+
 call vundle#end()
 
 filetype plugin indent on     " required!
