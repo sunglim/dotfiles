@@ -84,7 +84,6 @@ Bundle 'AutoComplPop'
 "for selecting autocompletion item by pressing tab
 Bundle 'SuperTab'
 "for FuzzyFinder tab
-Bundle 'SuperTab-continued.'
 Bundle 'scrooloose/nerdtree'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
