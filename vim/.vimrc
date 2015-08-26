@@ -43,11 +43,12 @@ nmap <F3> :Tlist<CR>
 nmap <F6> :BufExplorer<CR>
 nmap <F8> :NERDTreeFind<CR>
 nmap <F9> :NERDTreeToggle<CR>
+nmap <F11> :call CommitTemplate()<CR>
 
 "This totally depend on the project
-nmap <F11> :!find ./hbbtv/ ./launcher/ ./ohtv/ -iname '*.c' -o -iname '*.h' > cscope.files<CR>
-   \:!cscope -b -i cscope.files -f cscope.out<CR>
-   \:cs reset<CR>
+"nmap <F11> :!find ./hbbtv/ ./launcher/ ./ohtv/ -iname '*.c' -o -iname '*.h' > cscope.files<CR>
+"   \:!cscope -b -i cscope.files -f cscope.out<CR>
+"   \:cs reset<CR>
 
 
 "- replace ctags key with cscope
@@ -123,3 +124,6 @@ nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
+function! CommitTemplate()
+  r ~/work/program_store/dotfiles/vim/template.txt
+endfunction
