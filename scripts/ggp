@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# push to gerrit.
+
+ggp(branch) {
+  git push gerrit HEAD:refs/for/
+}
+
+ggp "$@"
