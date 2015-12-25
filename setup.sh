@@ -39,6 +39,5 @@ cp $CUR_DIR/util/ $HOME -R
 #
 # Ben's profile, It has short cuts and nice PS1.
 #
-echo "source $CUR_DIR/ben_profile/git_completion" >> ~/.bashrc
-echo "source $CUR_DIR/ben_profile/profile" >> ~/.bashrc
-echo "export PATH=$PATH:$CUR_DIR/scripts" >> ~/.bashrc
+echo 'source $CUR_DIR/ben_profile/profile' >> ~/.bashrc
+echo 'export PATH=$PATH:$CUR_DIR/scripts' >> ~/.bashrc
