@@ -39,5 +39,6 @@ cp $CUR_DIR/util/ $HOME -R
 #
 # Ben's profile, It has short cuts and nice PS1.
 #
-echo 'source $CUR_DIR/ben_profile/profile' >> ~/.bashrc
-echo 'export PATH=$PATH:$CUR_DIR/scripts' >> ~/.bashrc
+#NOTE: Do not use single quotation('). It can't understand $CUR_DIR.
+echo "source $CUR_DIR/ben_profile/profile" >> ~/.bashrc
+echo "export PATH=$PATH:$CUR_DIR/scripts" >> ~/.bashrc
