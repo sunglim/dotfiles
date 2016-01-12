@@ -18,6 +18,8 @@ set smarttab
 set hlsearch
 set list
 syntax enable
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
 "-------------------- VIM Start With --------------"
 "au VimEnter * Tlist
 "au VimEnter * NERDTree
