@@ -33,7 +33,7 @@ show_help() {
 }
 
 do_build() {
-  exec hdbcc hm b -b $profile -j 500 targets
+  exec hdbcc hm b -b $profile -j 500 $targets
 }
 
 main "$@"
