@@ -345,5 +345,5 @@ puha() {
   elif [ -z "$branch" ]; then
     branch="sql_opt_dev"
   fi
-  exec git push ssh://i333043@hdbgerrit.wdf.sap.corp:29418/hana HEAD:refs/for/$branch
+  git push ssh://i333043@hdbgerrit.wdf.sap.corp:29418/hana HEAD:refs/for/$branch
 }
