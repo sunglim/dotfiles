@@ -19,7 +19,7 @@ main() {
   if [ -z "$targets" ]; then
     targets="all_core"
   fi
-  profile="Release"
+  profile="Optimized"
 
   echo "========== $profile / $targets  ============="
 
