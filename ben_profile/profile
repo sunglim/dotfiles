@@ -19,18 +19,13 @@ case `uname` in
   Linux)  source $HOME/program_store/dotfiles/rc/profile_Linux ;;
 esac
 
-SEDI_OPTION="-r"
-if [ -z "$IS_DARWIN"]; then
-  SEDI_OPTION="-E"
-fi
-
 #
 # Paths etc
 #
 
 # Mac gets crappy hostname sometimes.
 __hostname() {
-  hostname -s | sed $SEDI_OPTION 's/dhcp-(.*)$/mac/'
+  hostname -s | sed -r 's/dhcp-(.*)$/mac/'
 }
 export PS1='\[\033[01;32m\]# $(__hostname)\[\033[01;34m\] \w \[\033[31m\]$(__git_ps1 "(%s)")\n\[\033[01;32m\]> \[\033[00m\]'
 
@@ -124,7 +119,7 @@ gbase() {
 }
 
 grev() {
-  gl | grep Cr-Commit-Position | head -n1 | sed $SEDI_OPTION 's/.*\{#(.*+)\}.*/\1/g'
+  gl | grep Cr-Commit-Position | head -n1 | sed -r 's/.*\{#(.*+)\}.*/\1/g'
 }
 
 gtry() {
@@ -268,7 +263,7 @@ gfc() {
   grep "rietveldissue = $issue" "`gfindconfigpath`" -B10 \
     | grep '^\[branch ' \
     | tail -n1 \
-    | sed $SEDI_OPTION 's/\[branch "(.*)"\].*/\1/'
+    | sed -r 's/\[branch "(.*)"\].*/\1/'
 }
 
 jsonp() {
