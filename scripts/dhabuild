@@ -1,0 +1,40 @@
+#!/bin/bash
+
+main() {
+  HELP=false
+
+  while getopts fh opt; do
+    case $opt in
+      h) HELP=true;;
+    esac
+    shift $((OPTIND - 1))
+  done
+
+  if $HELP; then
+    show_help
+    exit 0
+  fi
+
+  targets="$@"
+  if [ -z "$targets" ]; then
+    targets="all_core"
+  fi
+  profile="Debug"
+
+  echo "========== $profile / $targets  ============="
+
+  do_build
+}
+
+show_help() {
+  echo "Profile = {'Debug', 'Optimized', 'Release'}"
+  echo "Targets = {'all_core', 'all_tests', 'all', 'allpackages', 'dist', 'mrproper', 'generate_tags_for_vim'}"
+  echo "hdbcc hm b -b Debug(default) -j 150 all_core"
+  echo "For details, See http://happymake.wdf.sap.corp:1080/targets/"
+}
+
+do_build() {
+  hdbcc hm b -b $profile -j 150 $targets
+}
+
+main "$@"
