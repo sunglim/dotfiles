@@ -1,7 +1,10 @@
+escape ^Jj
 defscrollback 10000
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
 
 screen -t VIM 0
 screen -t BUILD 1
-screen -t BASH 2
+screen -t HDB_BIN 2
+screen -t TEST 3
+screen -t BASH 4
