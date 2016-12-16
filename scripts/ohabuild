@@ -28,7 +28,7 @@ main() {
 
 show_help() {
   echo "Profile = {'Debug', 'Optimized', 'Release'}"
-  echo "Targets = {'all_core', 'all_tests', 'all', 'allpackages', 'dist', 'mrproper', 'generate_tags_for_vim'}"
+  echo "Targets = {'all_core', 'all_tests', 'all', 'allpackages', 'dist', 'mrproper', 'generate_tags_for_vim', 'plan_stabilizer_unit_test'}"
   echo "hdbcc hm b -b Debug(default) -j 150 all_core"
   echo "For details, See http://happymake.wdf.sap.corp:1080/targets/"
 }
