@@ -1,8 +1,0 @@
-#!/bin/bash
-# Company chromium build
-
-do_build() {
-  ./build.sh --webos
-}
-
-do_build "$@"
