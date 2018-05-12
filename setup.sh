@@ -31,10 +31,17 @@ echo 'Install plugins declared at Bundle'
 vim +PluginInstall +qall
 
 #
-# Utility script.
+# Utility script
 #
 echo 'Copy ./util/* to ROOT'
 cp $CUR_DIR/util/ $HOME -R
+
+#
+# Install the silver searcher
+#
+echo 'Install the silver searcher'
+sh install_silver_searcher.sh
+
 
 #
 # Ben's profile, It has short cuts and nice PS1.
