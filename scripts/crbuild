@@ -21,7 +21,7 @@ do_build() {
     exit 0
   fi
 
-  export BUILDTYPE=Debug
+  export BUILDTYPE=Default
   export GYP_GENERATORS=ninja
   export GYP_PARALLEL=1
 
@@ -31,10 +31,10 @@ do_build() {
 
   targets="$@"
   if [ -z "$targets" ]; then
-    targets="chrome browser_tests unit_tests extensions_unittests"
+    targets="chrome browser_tests unit_tests extensions_unittests extensions_browsertests"
   fi
 
-  base=out/Debug
+  base=out/Default
   if [ -n "$RELEASE" ]; then
     base=out/Release
   fi
