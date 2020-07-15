@@ -374,3 +374,19 @@ function ghf {
     `grepped-history "$1" | unique-history | grep ^$2 | chop-first-column`;
   fi
 }
+
+#
+# K8S
+#
+
+kc()   { echo "Current KUBECONFIG: "; echo $KUBECONFIG; }
+k()    { kubectl "$@"; }
+kg()   { kubectl get "$@"; kc; }
+khaas()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-haas.yaml; kc;}
+korc()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-orc.yaml; kc;}
+
+khaas2()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-2-haas.yaml; kc;}
+korc2()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-2-orc.yaml; kc;}
+
+khaas9()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-9-haas.yaml; kc;}
+korc9()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-9-orc.yaml; kc;}
