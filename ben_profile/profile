@@ -382,6 +382,8 @@ function ghf {
 kc()   { echo "Current KUBECONFIG: "; echo $KUBECONFIG; }
 k()    { kubectl "$@"; }
 kg()   { kubectl get "$@"; kc; }
+kgp()  { kg po --sort-by=.status.startTime; }
+kget()   { kubectl get "$@"; kc; }
 khaas()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-haas.yaml; kc;}
 korc()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-orc.yaml; kc;}
 
