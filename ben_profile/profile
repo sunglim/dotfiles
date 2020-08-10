@@ -379,9 +379,9 @@ function ghf {
 # K8S
 #
 
-kc()   { echo "Current KUBECONFIG: "; echo $KUBECONFIG; }
+kc()   { echo -e "\nCurrent KUBECONFIG: "; echo $KUBECONFIG; }
 k()    { kubectl "$@"; }
-kg()   { kubectl get "$@"; kc; }
+kg()   { k get "$@"; kc; }
 kgp()  { kg po --sort-by=.status.startTime; }
 kget()   { kubectl get "$@"; kc; }
 khaas()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-haas.yaml; kc;}
