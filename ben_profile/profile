@@ -253,12 +253,6 @@ gfindconfigpath() {
   cd "$startdir"
 }
 
-gh() {
-  grep '\[branch "' "`gfindconfigpath`" \
-    | sed 's/^.*"\(.*\)".*$/\1/' \
-    | grep -v '^__'
-}
-
 gfc() {
   issue="$1"
   if [ -z "$issue" ]; then
@@ -384,11 +378,42 @@ k()    { kubectl "$@"; }
 kg()   { k get "$@"; kc; }
 kgp()  { kg po --sort-by=.status.startTime; }
 kget()   { kubectl get "$@"; kc; }
-khaas()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-haas.yaml; kc;}
-korc()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-orc.yaml; kc;}
+
+kgetpod()   { kubectl get pod -A |grep "$@"; kc; }
+
+runtoken() {
+  if [ -z "$ACCESS_TOKEN"]; then
+    printf "Set \n\n You may want to run 'xsuaa-cli get-access-token' \n\n export ACCESS_TOKEN=\n\n"
+  else
+    curl -X GET https://go-jwt-auth.gateway.orchestration.i333043-orc-hc-dev.dev-aws.hanacloud.ondemand.com -H "Authorization: Bearer $ACCESS_TOKEN"
+  fi
+}
+
+khaas() {
+ export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-"$@"-haas.yaml; kc;}
+khaas1()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-haas.yaml; kc;}
+korc1()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-orc.yaml; kc;}
 
 khaas2()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-2-haas.yaml; kc;}
 korc2()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-2-orc.yaml; kc;}
+
+khaas3()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-3-haas.yaml; kc;}
+korc3()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-3-orc.yaml; kc;}
+
+khaas4()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-4-haas.yaml; kc;}
+korc4()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-4-orc.yaml; kc;}
+
+khaas5()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-5-haas.yaml; kc;}
+korc5()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-5-orc.yaml; kc;}
+
+khaas6()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-6-haas.yaml; kc;}
+korc6()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-6-orc.yaml; kc;}
+
+khaas7()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-7-haas.yaml; kc;}
+korc7()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-7-orc.yaml; kc;}
+
+khaas8()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-8-haas.yaml; kc;}
+korc8()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-8-orc.yaml; kc;}
 
 khaas9()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-9-haas.yaml; kc;}
 korc9()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-9-orc.yaml; kc;}
