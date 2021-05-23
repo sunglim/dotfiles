@@ -417,3 +417,6 @@ korc8()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/k
 
 khaas9()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-9-haas.yaml; kc;}
 korc9()   { export KUBECONFIG=/Users/i333043/program_store/landscape/generated/kubeconfig-i333043-9-orc.yaml; kc;}
+
+hcreate() { ./hc create landscape --name=i333043 --stencil=gardener/hc-dev --with-haasa; }
+hdelete() { .hc delete landscape --name=i333043 --project=hc-dev; }
